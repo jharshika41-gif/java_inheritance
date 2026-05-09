@@ -136,4 +136,4 @@ public class Main {
         pt.displayDetails();
         pt.calculateAndDisplayTotalSalary();
     }
-}s
+}
