@@ -1,0 +1,139 @@
+// Base class
+class Employee {
+    String name;
+    String employeeId;
+    double salary;
+
+    Employee(String name, String employeeId, double salary) {
+        this.name = name;
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    void displayDetails() {
+        System.out.println("ID: " + employeeId + " | Name: " + name);
+    }
+
+    // To be overridden
+    void calculateAndDisplayTotalSalary() {
+        System.out.println("Base Salary: " + salary);
+    }
+}
+
+// Subclass for Full-Time
+class FullTimeEmployee extends Employee {
+    double bonus;
+
+    FullTimeEmployee(String name, String employeeId, double salary, double bonus) {
+        super(name, employeeId, salary);
+        this.bonus = bonus;
+    }
+
+    @Override
+    void calculateAndDisplayTotalSalary() {
+        double total = salary + bonus;
+        System.out.println("Total Salary (with Bonus): " + total);
+    }
+}
+
+// Subclass for Part-Time
+class PartTimeEmployee extends Employee {
+    int hoursWorked;
+    double hourlyRate;
+
+    PartTimeEmployee(String name, String employeeId, int hoursWorked, double hourlyRate) {
+        super(name, employeeId, 0); // Base salary not used here
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+    }
+
+    @Override
+    void calculateAndDisplayTotalSalary() {
+        double total = hoursWorked * hourlyRate;
+        System.out.println("Total Salary (Hours * Rate): " + total);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        FullTimeEmployee ft = new FullTimeEmployee("Rahul", "FT101", 50000, 5000);
+        PartTimeEmployee pt = new PartTimeEmployee("Simran", "PT202", 40, 500);
+
+        System.out.println("--- Full-Time Employee ---");
+        ft.displayDetails();
+        ft.calculateAndDisplayTotalSalary();
+
+        System.out.println("\n--- Part-Time Employee ---");
+        pt.displayDetails();
+        pt.calculateAndDisplayTotalSalary();
+    }
+}// Base class
+class Employee {
+    String name;
+    String employeeId;
+    double salary;
+
+    Employee(String name, String employeeId, double salary) {
+        this.name = name;
+        this.employeeId = employeeId;
+        this.salary = salary;
+    }
+
+    void displayDetails() {
+        System.out.println("ID: " + employeeId + " | Name: " + name);
+    }
+
+    // To be overridden
+    void calculateAndDisplayTotalSalary() {
+        System.out.println("Base Salary: " + salary);
+    }
+}
+
+// Subclasssss for Full-Time
+class FullTimeEmployee extends Employee {
+    double bonus;
+
+    FullTimeEmployee(String name, String employeeId, double salary, double bonus) {
+        super(name, employeeId, salary);
+        this.bonus = bonus;
+    }
+
+    @Override
+    void calculateAndDisplayTotalSalary() {
+        double total = salary + bonus;
+        System.out.println("Total Salary (with Bonus): " + total);
+    }
+}
+
+// Subclass for Part-Time
+class PartTimeEmployee extends Employee {
+    int hoursWorked;
+    double hourlyRate;
+
+    PartTimeEmployee(String name, String employeeId, int hoursWorked, double hourlyRate) {
+        super(name, employeeId, 0); // Base salary not used here
+        this.hoursWorked = hoursWorked;
+        this.hourlyRate = hourlyRate;
+    }
+
+    @Override
+    void calculateAndDisplayTotalSalary() {
+        double total = hoursWorked * hourlyRate;
+        System.out.println("Total Salary (Hours * Rate): " + total);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        FullTimeEmployee ft = new FullTimeEmployee("Rahul", "FT101", 50000, 5000);
+        PartTimeEmployee pt = new PartTimeEmployee("Simran", "PT202", 40, 500);
+
+        System.out.println("--- Full-Time Employee ---");
+        ft.displayDetails();
+        ft.calculateAndDisplayTotalSalary();
+
+        System.out.println("\n--- Part-Time Employee ---");
+        pt.displayDetails();
+        pt.calculateAndDisplayTotalSalary();
+    }
+}s
